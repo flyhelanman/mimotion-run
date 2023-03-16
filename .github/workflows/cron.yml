@@ -12,7 +12,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
         with:
-          token: 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
+          token: ${{ secrets.PAT }}
       - name: random cron
         run: |
           sed -i -E "s/(- cron: ')[0-9]+( [^[:space:]]+ \* \* \*')/\1$(($RANDOM % 10))\2/g" .github/workflows/run.yml
