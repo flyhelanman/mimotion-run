@@ -242,7 +242,9 @@ if __name__ == "__main__":
     try:
         #with open(os.path.join(os.path.dirname(os.path.dirname(__file__)), "/root/config.json"), "r", encoding="utf-8") as f:
         #    datas = json.loads(f.read())
+        print('==================start==================')
         datas = json.loads(os.environ["CONFIG"])
+        print(datas)
         # 酷推skey和server酱sckey和企业微信设置，只用填一个其它留空即可
         if datas.get("SKEY"):
             skey = datas.get("SKEY")
